@@ -1,0 +1,17 @@
+{
+  "name": "automated-exam-seating",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "install:all": "npm install && npm install --prefix server && npm install --prefix client",
+    "dev": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/start-local-mongo.ps1 && concurrently \"npm run dev --prefix server\" \"wait-on http://localhost:5000/api/health && npm run dev --prefix client\"",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "seed": "npm run seed --prefix server",
+    "build": "npm run build --prefix client"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "wait-on": "^9.1.0"
+  }
+}

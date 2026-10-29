@@ -1,0 +1,30 @@
+# Dependencies and build output
+node_modules/
+**/node_modules/
+.venv/
+**/.venv/
+dist/
+**/dist/
+
+# Local environment and runtime files
+.env
+**/.env
+!.env.example
+!**/.env.example
+*.log
+npm-debug.log*
+
+# Local editor and operating-system files
+.vscode/*
+!.vscode/extensions.json
+.DS_Store
+Thumbs.db
+
+# Student-list source data; do not publish personal information
+/AIML_600_students.pdf
+/CSE_600_students.pdf
+/CSE_AI_600_students.pdf
+/CSE_DS_600_students.pdf
+/ECE_600_students.pdf
+/EEE_600_students.pdf
+/MEC_600_students.pdf
